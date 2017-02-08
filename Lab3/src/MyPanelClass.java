@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Insets;
+import java.awt.Polygon;
 
 import javax.swing.JPanel;
 
@@ -25,18 +26,24 @@ public class MyPanelClass extends JPanel {
         
        //BORDER
         
-        g.setColor(Color.GREEN);
-        g.drawRect(x1, y1+1, width, height-1);
+       g.setColor(Color.GREEN);
+       g.drawRect(x1, y1, width, height);
         
         
-        g.setColor(Color.RED);
+       g.setColor(Color.RED);
         // Because width = x2 - x1 we need to subtract the double of the value in with and height
-        g.drawRect(x1+20, y1+20, width-40, height-40);
+       g.drawRect(x1+20, y1+10, width-40, height-20);
         
+       g.setColor(Color.RED);
+       g.drawLine(x2,y1,x1,y2);
         
+       g.setColor(Color.WHITE);
+       g.drawLine(x1, y1, x2, y2);  
         
+        g.setColor(Color.blue);
+        g.fillOval(getX()+90,getY()+40, 50,50); 
         
-        
+      
 	}
 
 }
