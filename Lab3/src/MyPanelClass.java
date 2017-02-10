@@ -26,7 +26,7 @@ public class MyPanelClass extends JPanel {
 		g.fillRect(x1, y1, width, height);
 
 		//BORDER
-		
+
 
 
 
@@ -36,30 +36,29 @@ public class MyPanelClass extends JPanel {
 		g.setColor(Color.red);
 		g.fillRect(x1, y1, width, height/5);
 		g.setColor(Color.red);
-		g.fillRect(x1, y1+50, width, height-100);
-		
+		g.fillRect(x1, y1+75, width, height-150);
+//
 		g.setColor(Color.red);
-		g.fillRect(x1, y1+100, width, height-100);
+		g.fillRect(x1, y1+160, width, height-150);
 
-		  
+
 
 		//       g.setColor(Color.blue);
 		//       g.fillOval((width/2)-28,(height/2)-28,55,55); 
 
 
-		       Polygon p1 = new Polygon();
-		       p1.addPoint(x1, y1 );
-		       p1.addPoint(width/2, height/2);
-		       p1.addPoint(x1, y2);
-		       g.setColor(Color.BLUE);
-		       g.fillPolygon(p1);
-		       
-		       TheStar s = new TheStar(x1,y1-10);
-		   		s.draw(g);
-		     
-		       
-		   	 g.setColor(Color.WHITE);
-		     g.drawLine(x1+10, y1, x2, y1);
+		Polygon p1 = new Polygon();
+		p1.addPoint(x1, y1 );
+		p1.addPoint(width/2, height/2);
+		p1.addPoint(x1, y2);
+		g.setColor(Color.BLUE);
+		g.fillPolygon(p1);
+
+		TheStar s = new TheStar(x1,y1+10);
+		s.draw(g);
+
+
+		
 
 	}
 
