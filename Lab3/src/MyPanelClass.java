@@ -1,65 +1,95 @@
 import java.awt.Color;
+
 import java.awt.Graphics;
+
 import java.awt.Insets;
-import java.awt.Polygon;
+
+
+
+
 
 import javax.swing.JPanel;
 
+
+
 public class MyPanelClass extends JPanel {
-	public void paintComponent(Graphics g){
-		super.paintComponent(g);
 
-		//To Compute interior coordinates
-		Insets myInsets = this.getInsets();
+public void paintComponent(Graphics g){
 
-		int x1 = myInsets.left;
-		int y1 = myInsets.top;
-		int x2 = getWidth() - myInsets.right - 1;
-		int y2 = getHeight() - myInsets.bottom - 1;
-		int width = x2 - x1;
-		int height = y2 - y1;
+super.paintComponent(g);
 
 
-		//Background
+//To Compute interior coordinates
 
-		g.setColor(Color.GRAY);
-		g.fillRect(x1, y1, width, height);
-
-		//BORDER
+Insets myInsets = this.getInsets();
 
 
+        int x1 = myInsets.left;
 
+        int y1 = myInsets.top;
 
-		g.setColor(Color.white);
-		g.fillRect(x1, y1, width, height);
+        int x2 = getWidth() - myInsets.right - 1;
 
-		g.setColor(Color.red);
-		g.fillRect(x1, y1, width, height/5);
-		g.setColor(Color.red);
-		g.fillRect(x1, y1+75, width, height-150);
-//
-		g.setColor(Color.red);
-		g.fillRect(x1, y1+160, width, height-150);
+        int y2 = getHeight() - myInsets.bottom - 1;
+
+        int width = x2 - x1;
+
+        int height = y2 - y1;
 
 
 
-		//       g.setColor(Color.blue);
-		//       g.fillOval((width/2)-28,(height/2)-28,55,55); 
+        //Background
+
+        
+
+        g.setColor(Color.GRAY);
+
+        g.fillRect(x1, y1, width, height);
+
+        
+
+       //BORDER
+
+        
+
+     /*  g.setColor(Color.GREEN);
+
+       g.drawRect(x1, y1, width, height);
+
+        
+
+        
+
+       g.setColor(Color.RED);
+
+        // Because width = x2 - x1 we need to subtract the double of the value in with and height
+
+       g.drawRect(x1+20, y1+10, width-40, height-20);
+
+        
+
+       g.setColor(Color.RED);
+
+       g.drawLine(x2,y1,x1,y2);
+
+        
+
+       g.setColor(Color.WHITE);
+
+       g.drawLine(x1, y1, x2, y2);  */
+
+        
+
+       g.setColor(Color.blue);
+
+       g.fillOval(((x1+x2)/2)-28,((y1+y2)/2)-28,55,55); 
+
+        
+
+       
+
+}
 
 
-		Polygon p1 = new Polygon();
-		p1.addPoint(x1, y1 );
-		p1.addPoint(width/2, height/2);
-		p1.addPoint(x1, y2);
-		g.setColor(Color.BLUE);
-		g.fillPolygon(p1);
-
-		TheStar s = new TheStar(x1,y1+10);
-		s.draw(g);
-
-
-		
-
-	}
 
 }
