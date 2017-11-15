@@ -7,7 +7,7 @@ public class Lab3Exercises {
 	public static void main(String[] args) {
 		JFrame myFrame = new JFrame("Luis M. Cintron");
 		myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		myFrame.setSize(300,200);
+		myFrame.setSize(200,200);
 		
 		myFrame.setJMenuBar(null);
 		MyPanelClass myPanel = new MyPanelClass();
